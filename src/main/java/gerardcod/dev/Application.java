@@ -1,6 +1,7 @@
 package gerardcod.dev;
 
 import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 
 public class Application {
 
@@ -9,7 +10,14 @@ public class Application {
         names.forEach(System.out::println);
     }
 
+    public static int countWords(String text) {
+        String[] words = StringUtils.split(text, ' ');
+        return (words == null) ? 0 : words.length;
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello from Application");
+        int count = Application.countWords("I have fout words");
+        System.out.println("Words: " + count);
     }
 }
