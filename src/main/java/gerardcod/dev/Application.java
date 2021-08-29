@@ -10,14 +10,15 @@ public class Application {
         names.forEach(System.out::println);
     }
 
-    public static int countWords(String text) {
+    public int countWords(String text) {
         String[] words = StringUtils.split(text, ' ');
         return (words == null) ? 0 : words.length;
     }
 
     public static void main(String[] args) {
         System.out.println("Hello from Application");
-        int count = Application.countWords("I have fout words");
+        Application app = new Application();
+        int count = app.countWords("I have fout words");
         System.out.println("Words: " + count);
     }
 }
