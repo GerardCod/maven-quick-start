@@ -12,3 +12,5 @@ buildNumber.properties
 
 # IDE configuration
 .vscode/
+.settings
+.classpath
